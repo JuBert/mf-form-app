@@ -2,6 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import federation from '@originjs/vite-plugin-federation'
 import tailwindcss from '@tailwindcss/vite'
+import { writeFileSync } from 'fs'
+import { resolve } from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -15,6 +17,12 @@ export default defineConfig({
       },
       shared: ['react', 'react-dom', 'tailwindcss'],
     }),
+    {
+        name: 'add-nojekyll',
+        writeBundle() {
+            writeFileSync(resolve(__dirname, 'dist', '.nojekyll'), '');
+        },
+    }
   ],
   build: {
     modulePreload: false,
