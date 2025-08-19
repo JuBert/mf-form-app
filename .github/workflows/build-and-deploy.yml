@@ -41,4 +41,4 @@ jobs:
     - name: Verify deployment
       run: |
         echo "Deployment completed"
-        echo "Your app should be available at: https://jubert.github.io/mf-component-library/"
+        echo "Your app should be available at: https://jubert.github.io/mf-form-app/"
