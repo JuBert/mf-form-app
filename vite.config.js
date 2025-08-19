@@ -13,7 +13,7 @@ export default defineConfig({
     federation({
       name: 'host-app',
       remotes: {
-        remoteApp: 'http://localhost:5001/assets/remoteEntry.js',
+        remoteApp: 'https://jubert.github.io/mf-component-library/assets/remoteEntry.js',
       },
       shared: ['react', 'react-dom', 'tailwindcss'],
     }),
